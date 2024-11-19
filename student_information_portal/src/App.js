@@ -1,22 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import '../assets/css/compo.css'
+import {students} from './data/studentdata'
+import {useState} from 'react'
+import Profile from './components/Profile';
 
 function App() {
+  const [studentIndex, setStudentIndex] = useState(0)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <h1>Students Information Portal</h1>
+      <div className = "outerDiv">
+        <div className ="rightDiv">
+        <Profile student={students[studentIndex]}/>
+        </div>
+      </div>
       </header>
     </div>
   );
