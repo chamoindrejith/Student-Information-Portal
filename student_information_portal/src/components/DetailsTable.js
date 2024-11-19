@@ -13,7 +13,8 @@ const DetailsTable = ({students, setStudentIndex}) =>{
                     <td>{student.firstName}</td>
                     <td>{student.lastName}</td>
                     <td>{student.course}</td>
-                    <td>{student.country}</td>
+                    <td>{student.address.
+                    country}</td>
                     <td>
                         <button onClick={()=>setStudentIndex(i)}> View
                         </button>
@@ -24,4 +25,4 @@ const DetailsTable = ({students, setStudentIndex}) =>{
     )
 }
 
-export default Table
+export default DetailsTable
